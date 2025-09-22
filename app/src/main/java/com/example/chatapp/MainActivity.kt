@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -115,11 +116,11 @@ fun MessageCard(msg: Message) {
 
             // Message body
             Surface(shape = MaterialTheme.shapes.medium,
-                shadowElevation = 2.dp,
-                color = MaterialTheme.colorScheme.surface) {
+                shadowElevation = 2.dp) {
                 Text(
                     text = msg.body,
                     modifier = Modifier.padding(all = 4.dp),
+
                     // If the message is expanded, we display all its content
                     // otherwise we only display the first line
                     maxLines = if (isExpanded) Int.MAX_VALUE else 1,
