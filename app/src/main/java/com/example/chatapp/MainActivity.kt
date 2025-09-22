@@ -78,7 +78,7 @@ fun Conversation(messages: List<Message>) {
 @Composable
 fun MessageCard(msg: Message) {
     // Add padding around our message
-    Row(modifier = Modifier.padding(all = 8.dp)) {
+    Row(modifier = Modifier.padding(10.dp)) {
         Image(
             painter = painterResource(R.drawable.yoda),
             contentDescription = "Contact profile picture",
